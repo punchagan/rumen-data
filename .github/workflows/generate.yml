@@ -30,4 +30,4 @@ jobs:
       - name: Test Readability CLI
         run: |
           npm install -g readability-cli
-          readable https://baali.muse-amuse.in/posts/readable-code.html
+          readable https://baali.muse-amuse.in/posts/readable-code.html -p html-content
