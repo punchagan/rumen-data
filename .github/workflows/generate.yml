@@ -11,6 +11,7 @@ on:
   workflow_dispatch:
 
 concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -25,3 +26,10 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+
+      - name: Test Readability CLI
+        env:
+          PATH: node_modules/.bin/:$PATH
+        run: |
+          npm i @gardenapple/readability-cli
+          readable https://baali.muse-amuse.in/posts/readable-code.html
