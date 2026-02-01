@@ -1,3 +1,4 @@
+---
 name: Generate Feed
 
 on:
@@ -8,6 +9,9 @@ on:
     # Run daily at midnight UTC
     - cron: "0 0 * * *"
   workflow_dispatch:
+
+concurrency:
+  cancel-in-progress: true
 
 jobs:
   generate:
