@@ -28,8 +28,6 @@ jobs:
           node-version: "20"
 
       - name: Test Readability CLI
-        env:
-          PATH: node_modules/.bin/:$PATH
         run: |
-          npm i @gardenapple/readability-cli
+          npm install -g readability-cli
           readable https://baali.muse-amuse.in/posts/readable-code.html
