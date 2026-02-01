@@ -1,10 +1,11 @@
 {
   "url": "https://github.com/punchagan/rumen",
-  "title": "Another title",
+  "title": "Rumen repository",
   "tags": [
-    "tech",
-    "read-later"
+    "github",
+    "rss",
+    "feed"
   ],
-  "description": "Yes",
-  "added": 1769928887237
+  "description": "another",
+  "added": 1769928903454
 }
