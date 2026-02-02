@@ -1,5 +1,5 @@
 ---
-name: Generate Feed
+name: Fetch Articles and Generate Feed
 
 on:
   push:
@@ -27,10 +27,17 @@ jobs:
         with:
           node-version: "20"
 
-      - name: Test Readability CLI
+      - name: Install Readability CLI
         run: |
           npm install -g readability-cli
-          wget -c https://punchagan.github.io/rumen/scripts/generate.exe
+
+      - name: Download latest rumen-cli binary
+        run: |
+          wget -c https://punchagan.github.io/rumen/scripts/rumen-cli.exe
+          chmod a+x rumen-cli.exe
+
+      - name: Generate Feed
+        run: |
           ls -lah
-          ./generate.exe
+          ./rumen-cli.exe generate
           cat atom.xml
