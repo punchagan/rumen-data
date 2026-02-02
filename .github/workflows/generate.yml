@@ -22,11 +22,6 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - uses: actions/checkout@v6
-        with:
-          repository: 'punchagan/rumen'
-          path: 'rumen'
-
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
@@ -35,6 +30,7 @@ jobs:
       - name: Test Readability CLI
         run: |
           npm install -g readability-cli
-          readable https://baali.muse-amuse.in/posts/readable-code.html -p html-content -l keep
+          wget -c https://punchagan.github.io/rumen/scripts/generate.exe
           ls -lah
-          echo $PWD
+          ./generate.exe
+          cat atom.xml
