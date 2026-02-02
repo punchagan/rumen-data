@@ -18,7 +18,9 @@ jobs:
   generate:
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: read
+      pages: write
+      id-token: write
     steps:
       - uses: actions/checkout@v6
 
@@ -38,6 +40,15 @@ jobs:
 
       - name: Generate Feed
         run: |
-          ls -lah
           ./rumen-cli.exe generate
-          cat atom.xml
+          mkdir web/
+          mv atom.xml web/
+
+      - name: Upload web/ to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: web
+
+      - name: Deploy
+        if: github.ref == 'refs/heads/main'
+        uses: actions/deploy-pages@v4
