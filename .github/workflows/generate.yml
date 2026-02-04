@@ -3,6 +3,8 @@ name: Fetch Articles and Generate Feed
 
 on:
   push:
+    paths:
+      - "articles/**"
   schedule:
     # FIXME: Is the schedule good enough?
     - cron: "0 0 * * *"
