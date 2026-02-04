@@ -72,6 +72,10 @@ jobs:
         run: |
           npm install -g readability-cli
 
+      - name: Install Readability CLI
+        run: |
+          npm install -g readability-cli
+
       - name: Fetch article content using the latest rumen-cli executable
         run: |
           ./fetch.sh
