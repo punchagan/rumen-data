@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-set -euox pipefail
+set -euo pipefail
 
 cd "$(dirname "$0")"
 
@@ -8,6 +8,13 @@ cd "$(dirname "$0")"
 if [ -z "${GITHUB_ACTIONS:-}" ]; then
     git pull --rebase origin
 fi
+
+# Check if readability-cli is installed
+command -v readablxe >/dev/null 2>&1 || {
+    echo "readability-cli is not installed. Please install it with:"
+    echo "  npm install -g readability-cli"
+    exit 1
+}
 
 # Download the latest rumen-cli executable if it does not exist
 if ! [ -x ./rumen-cli.exe ]; then
