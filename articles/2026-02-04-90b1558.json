@@ -1,11 +1,8 @@
 {
   "url": "https://interjectedfuture.com/what-is-algebraic-about-algebraic-effects/",
   "title": "What is Algebraic about Algebraic Effects?",
-  "tags": [
-    "programming",
-    "ocaml",
-    "effects"
-  ],
+  "tags": [ "programming", "ocaml", "effects" ],
   "description": "An explanation of Algebraic Effects",
-  "added": 1770182816351
+  "content": "3014a64a7f151f6f711bdc96c8e0fbc3",
+  "added": 1770182816351.0
 }
