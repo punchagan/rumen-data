@@ -1,14 +1,8 @@
 {
   "url": "https://www.anthropic.com/engineering/building-c-compiler",
   "title": "Building a C compiler with a team of parallel Claudes \\ Anthropic",
-  "tags": [
-    "tech",
-    "ai",
-    "llms",
-    "agentic",
-    "programming",
-    "anthropic"
-  ],
+  "tags": [ "tech", "ai", "llms", "agentic", "programming", "anthropic" ],
   "description": " I tasked 16 agents with writing a Rust-based C compiler, from scratch, capable of compiling the Linux kernel. Over nearly 2,000 Claude Code sessions and $20,000 in API costs, the agent team produced a 100,000-line compiler that can build Linux 6.9 on x86, ARM, and RISC-V.\n\nThe compiler is an interesting artifact on its own, but I focus here on what I learned about designing harnesses for long-running autonomous agent teams: how to write tests that keep agents on track without human oversight, how to structure work so multiple agents can make progress in parallel, and where this approach hits its ceiling.",
-  "added": 1770402819993
+  "content": "762f95f87099d9cdc45338d4e78ca749",
+  "added": 1770402819993.0
 }
